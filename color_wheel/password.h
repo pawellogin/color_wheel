@@ -63,23 +63,28 @@ public:
 		}			
 	}
 
-	void check_password() {
-
+	bool check_password() {
+		if (pass_attempt == pass) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
 	}
 
-	friend std::ostream& operator<<(std::ostream& os, const Password& p1)
+	friend std::ostream& operator<<(std::ostream& os, const Password& password)
 	{
 		std::string output;
 
-		for (int i = 0; i < p1.pass.size(); i++)
+		for (int i = 0; i < password.pass.size(); i++)
 		{
-			if (p1.mask[i] == 1) {
+			if (password.mask[i] == 1) {
 				output += "\033[47m";
 				output += "\033[31m";
 				output += ".";
 			}
 			else {
-				output += p1.pass[i];
+				output += password.pass[i];
 			}
 		}
 		output += "\033[0m";
@@ -88,8 +93,11 @@ public:
 		return os;
 	}
 
-	friend std::istream& operator>>(std::istream& is, Password& p1) {
-		getline(is, p1.pass_attempt);
+	friend std::istream& operator>>(std::istream& is, Password& password) {
+		getline(is, password.pass_attempt);
+		for (auto& c : password.pass_attempt) {  
+			c = toupper(c);
+		}
 		return is;
 	}
 };
