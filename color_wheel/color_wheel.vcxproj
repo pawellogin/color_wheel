@@ -129,6 +129,14 @@
   <ItemGroup>
     <ClCompile Include="color_wheel.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="color.h" />
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="password.h" />
+    <ClInclude Include="players.h" />
+    <ClInclude Include="round.h" />
+    <ClInclude Include="wheel.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
