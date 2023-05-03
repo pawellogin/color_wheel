@@ -2,14 +2,17 @@
 #include <iostream>
 #include <vector>
 
-
-
 struct player{
 	std::string name;
 	int wallet;
 
 	player& operator+=(int amount) {
 		wallet += amount;
+		return *this;
+	}
+
+	player& operator=(int amount) {
+		wallet = amount;
 		return *this;
 	}
 
@@ -21,12 +24,12 @@ struct player{
 
 		return os;
 	}
-
 };
 
 class Players {
 
 	std::vector<player> player_list;
+
 public:
 	void add_player(std::string name) {
 		player* pt = new player;
@@ -50,7 +53,4 @@ public:
 	player& get_player(int id) {
 		return player_list[id];
 	}
-
-
-
 };

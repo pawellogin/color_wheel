@@ -32,9 +32,6 @@
     <ClInclude Include="wheel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="color.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="round.h">
       <Filter>Header Files</Filter>
     </ClInclude>

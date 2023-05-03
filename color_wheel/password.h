@@ -12,8 +12,6 @@ public:
 	int mask[50];
 	std::ifstream file;
 	std::string pass_attempt;
-
-
 public:
 
 	Password() {
@@ -84,6 +82,8 @@ public:
 				output += ".";
 			}
 			else {
+				output += "\033[0m";
+				output += "\033[31m";
 				output += password.pass[i];
 			}
 		}

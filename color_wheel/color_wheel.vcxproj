@@ -130,7 +130,6 @@
     <ClCompile Include="color_wheel.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="color.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="password.h" />
     <ClInclude Include="players.h" />

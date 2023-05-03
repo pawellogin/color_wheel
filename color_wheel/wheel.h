@@ -15,13 +15,11 @@ public:
 	}
 
 	void operator=(const Wheel& other) {
-		// Copy the vector of prizes
 		this->prizes = other.prizes;
 	}
 
 	operator int() const {
-		// Randomly select a prize from the vector
-		std::srand(std::time(nullptr)); // Seed the random number generator
+		std::srand(std::time(nullptr)); 
 		int index = std::rand() % this->prizes.size();
 		return this->prizes[index];
 	}
